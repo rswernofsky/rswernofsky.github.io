@@ -59,12 +59,10 @@ nav {
 }
 
 nav li :hover {
-	color: grey;
-	text-decoration: underline;
+	color: lightgrey;
 }
 
 nav li a {
-	text-decoration: none;
 	color: black;
 }
 
@@ -73,12 +71,11 @@ nav li {
     display: inline-block;
 	font-size: 17px;
 	margin: 0 0.5rem 0 0;
-	text-decoration: none;
 }
 
 #portrait {
-	width: 14rem;
-    height: 14rem;
+	width: 12rem;
+    height: 12rem;
     border-radius: 1rem;
 	float: right;
 	margin: 0 0 0 1rem;
