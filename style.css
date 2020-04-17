@@ -4,15 +4,26 @@
 }
 
 body {
-	font-family: 'Inter', sans-serif;
-	/* font-family: 'Roboto', sans-serif; */
+	font-family: 'Lato', sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li :hover {
+	color: grey;
+	text-decoration: underline;
+}
+
+
+
 #container {
-	width: 85%;
+	width: 90%;
 	height: 100vh;
 	max-width: 650px;
 	display: flex;
@@ -21,7 +32,7 @@ body {
 }
 
 p {
-    /* line-height: 130%; */
+    line-height: 130%;
     margin:.6rem 0;
 }
 
