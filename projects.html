@@ -1,64 +1,85 @@
 <html>
 <title>Rebecca Swernofsky</title>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@100&display=swap" rel="stylesheet">
-		<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@100&display=swap"
+		rel="stylesheet">
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
 	        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	        crossorigin="anonymous"></script> --> <!-- jquery -->
-		<link rel="stylesheet" href="style2.css">
-		<script type="text/javascript" src="script.js"></script>
-	</head>
+	        crossorigin="anonymous"></script> -->
+	<!-- jquery -->
+	<link rel="stylesheet" href="style2.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
 
-	<body class="body">
+<body class="body">
 
-		<div id="container">
+	<div id="container">
 
-			<h1><a href="/" id="title">Rebecca Swernofsky</a></h1>
-            <nav>
-                <ul>
-					<li><a href="/about">About</a></li>
-					<li><a href="/projects">Projects</a></li>
-					<li><a href="/lists">Lists</a></li>
-                </ul>
-			</nav>
-			<div id="content">
-				<h2>Data Structures in Java</h2>
-				<p>I made and used an assortment of different data structures during my enrollment in Northeastern's <a href="https://course.ccs.neu.edu/cs2510a">CS 2510 Accelerated</a> course, taught by <a href="https://www.khoury.northeastern.edu/people/benjamin-lerner/">Benjamin Lerner</a>.</p>
-				<p>These include:</p>
-				<ul>
-					<li>binary search trees</li>
-					<li>deques (double-ended queues)</li>
-					<li>non-mutable lists</li>
-					<li>other representations of non-mutable lists</li>
-					<li>orderable multisets</li>
-					<li>stacks</li>
-					<li>queues</li>
-				</ul>
-				<p>Because these data structures were made using the guidance of the homeworks, labs, lectures, and exams, the instructor has required that the code be kept private, but can be made available by request. </p>
-				
-				<h2>Snake</h2>
-				<p>My version of the classic arcade game, built with Javascript Canvas.</p>
-				<p>View it live <a href="/projects/snake.html"">here</a> or look at the source code <a href="https://github.com/rswernofsky/Snake">here</a>.</p>
-				
-				<h2>Maze Generation and Solving</h2>
-				<p>Coming soon!</p>
+		<h1><a href="/" id="title">Rebecca Swernofsky</a></h1>
+		<nav>
+			<ul>
+				<li><a href="/about">About</a></li>
+				<li><a href="/projects">Projects</a></li>
+				<li><a href="/lists">Lists</a></li>
+			</ul>
+		</nav>
+		<div id="content">
+			<h2>Data Structures in Java</h2>
+			<p>I made and used an assortment of different data structures during my enrollment in Northeastern's <a
+					href="https://course.ccs.neu.edu/cs2510a">CS 2510 Accelerated</a> course, taught by <a
+					href="https://www.khoury.northeastern.edu/people/benjamin-lerner/">Benjamin Lerner</a>.</p>
+			<p>These include:</p>
+			<ul>
+				<li>binary search trees</li>
+				<li>deques (double-ended queues)</li>
+				<li>non-mutable lists</li>
+				<li>other representations of non-mutable lists</li>
+				<li>orderable multisets</li>
+				<li>stacks</li>
+				<li>queues</li>
+			</ul>
+			<p>Because these data structures were made using the guidance of the homeworks, labs, lectures, and exams,
+				the instructor has required that the code be kept private, but can be made available by request. </p>
 
-				<h2>Cellular Automata</h2>
-				<p>This project was created based on <a href="https://course.ccs.neu.edu/cs2510a/assignment7.html">this assignment</a> for Northeastern's CS 2510 Accelerated course. It models simple binary rule-based cellular automata, arranged in a line. The program starts with a single row of square cells whose states are either on or off. On every tick, a new row of children cells are generated from the previous row using a specified rule. Certain rules cause interesting patterns to emerge.</p>
-				<p>The source code is kept private by instructor policy, but can be made public upon request!</p>
+			<h2>Snake</h2>
+			<p>My version of the classic arcade game, built with Javascript Canvas.</p>
+			<p>View it live <a href="/projects/snake.html"">here</a> or look at the source code <a href="
+					https://github.com/rswernofsky/Snake">here</a>.</p>
 
-				<h2>Huffman Encoding</h2>
-				<p>Coming soon!</p>
+			<h2>Maze Generation and Solving</h2>
+			<p>Coming soon!</p>
 
-				<h2>Squeezing Pictures</h2>
-				<p>Coming soon!</p>
+			<h2>Cellular Automata</h2>
+			<p>This project was created based on <a href="https://course.ccs.neu.edu/cs2510a/assignment7.html">this
+					assignment</a> for Northeastern's CS 2510 Accelerated course. It models simple binary rule-based
+				cellular automata, arranged in a line. The program starts with a single row of square cells whose states
+				are either on or off. On every tick, a new row of children cells are generated from the previous row
+				using a specified rule. Certain rules cause interesting patterns to emerge.</p>
+			<p>The source code is kept private by instructor policy, but can be made public upon request!</p>
 
-			</div>
-			<div id="footer">
-				<span>@ 2020 Rebecca Swernofsky</span>
-			</div>
+			<h2>Huffman Encoding</h2>
+			<p>This project is a Huffman encoding program: given an alphabet and the relative frequencies of each
+				letter, it creates a binary code for each letter, such that letters that show up more in the language
+				(have larger frequencies) will have shorter codes, while letters that show up less often in the language (have
+				smaller frequencies) will have longer codes. When using a code to represent a word in a language, on
+				average, a code produced through Huffman encoding will be shorter than an encoding algorithm that gives every
+				letter a code with the same length. Read more about Huffman encoding <a
+					href="https://en.wikipedia.org/wiki/Huffman_coding">here</a>.</p>
+			<p>This project was created using the instructions for problem 3 in <a
+					href="https://course.ccs.neu.edu/cs2510a/assignment6.html">this assignment</a> for Northeastern's CS
+				2510 Accelerated course. By instructor policy, the source code can only be made public by request.</p>
+
+			<!-- <h2>Squeezing Pictures</h2>
+				<p>Coming soon!</p> -->
 
 		</div>
-	</body>
+		<div id="footer">
+			<span>@ 2020 Rebecca Swernofsky</span>
+		</div>
+
+	</div>
+</body>
+
 </html>
