@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+#canvas {
+    border: solid;
+}
+
 body {
 	font-family: 'Lato', sans-serif;
 	display: flex;
@@ -22,6 +26,13 @@ p {
     margin:.6rem 0;
 }
 
+#back {
+    font-size: 20px;
+    /* text-decoration: ; */
+    color: black;
+    margin: 1rem 0 0 0;
+}
+
 h2, #title {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -29,6 +40,12 @@ h2, #title {
 h2 {
     margin: 2.5rem 0 1rem;
 	font-size: 27px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 1.5rem 0 0.5rem;
+	font-size: 20px;
 }
 
 #title {
@@ -79,11 +96,6 @@ nav li {
     border-radius: 1rem;
 	float: right;
 	margin: 0 0 0 1rem;
-}
-
-#content ul {
-	padding: 0 0 0 2rem;
-    line-height: 175%;
 }
 
 #end {
