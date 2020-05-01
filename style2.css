@@ -13,7 +13,7 @@ body {
 #container {
 	width: 90%;
 	/* height: 100vh; */
-	margin: 3rem 0 0 0;
+	margin: 3rem 0 3rem 0;
 	max-width: 650px;
 }
 
@@ -21,6 +21,14 @@ p {
     line-height: 130%;
     margin:.6rem 0;
 }
+	
+#back {
+    font-size: 20px;
+    /* text-decoration: ; */
+    color: black;
+    margin: 1rem 0 0 0;
+}
+
 
 h2, #title {
 	font-family: 'Montserrat', sans-serif;
@@ -29,6 +37,12 @@ h2, #title {
 h2 {
     margin: 2.5rem 0 1rem;
 	font-size: 27px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 1.5rem 0 0.5rem;
+	font-size: 20px;
 }
 
 #title {
@@ -64,6 +78,10 @@ nav li {
     display: inline-block;
 	font-size: 17px;
 	margin: 0 0.5rem 0 0;
+}
+
+#canvas {
+    border: solid;
 }
 
 #portrait {
