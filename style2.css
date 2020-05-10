@@ -97,6 +97,12 @@ nav li {
     line-height: 175%;
 }
 
+hr {
+	margin: 2rem 0 0 0;
+	border: white;
+	border-top: 1px solid grey;
+}
+
 #end {
     margin: 3rem;
     padding: 3rem;
