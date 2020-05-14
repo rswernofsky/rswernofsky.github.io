@@ -34,12 +34,13 @@ p {
 }
 
 
-h2, #title {
+/* h2, #title {
 	font-family: 'Montserrat', sans-serif;
-	/* font-family: 'Lato', sans-serif; */
-}
+	font-family: 'Lato', sans-serif;
+} */
 
 h2 {
+	font-family: 'Montserrat', sans-serif;
     margin: 2.5rem 0 1rem;
 	font-size: 27px;
 }
@@ -51,10 +52,13 @@ h3 {
 }
 
 #title {
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
 	margin: 0 0 0 0;
     font-size: 45px;
     color: black;
 	text-decoration: none;
+	margin-left: -0.3rem;
 }
 
 #content ul {
