@@ -20,8 +20,18 @@
 		#canvas {
 			/* float: left;
 			margin: 0 2rem 0 0; */
-			float: right;
 			margin: 0 0 0 2rem;
+			/* display: inline; */
+			float: right;
+		}
+
+		/* Smartphone Portrait and Landscape */ 
+		@media only screen 
+			and (min-device-width : 320px) 
+			and (max-device-width : 480px){ 
+			#canvas {
+				display: none;
+			}
 		}
 	</style>
 
