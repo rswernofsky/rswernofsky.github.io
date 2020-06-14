@@ -10,6 +10,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 }
 
 a {
@@ -60,4 +61,42 @@ nav li {
 	font-family: 'Montserrat', sans-serif;
     display: inline-block;
 	margin:0 0.5rem 0 0;
+}
+
+.blob {
+	position: absolute;
+	min-width: 40rem;
+	width: 225vh;
+	z-index: -1;
+	/* animation: move 10s ease-in-out infinite; */
+	overflow: hidden;
+	/* transform-origin: 50% 50%; */
+}
+
+#blob1 {
+	top: 15vmin;
+	left: -10vmax;
+	fill: #e0fefe;
+}
+
+#blob2 {
+	top: -80vmin;
+	left: 50vmax;
+	fill: #AFDAC1;
+}
+
+#blob3 {
+	top: -40vmin;
+	left: -80vmin;
+	fill: #FFFFD8;
+}
+
+#blob4 {
+	top: -130vmin;
+	left: -50vmin;
+	fill: #C7CEEA;
+}
+
+#blobs {
+	/* overflow: hidden; */
 }
