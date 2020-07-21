@@ -1,0 +1,25 @@
+/* Hide the images by default */
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: none;
+    z-index: -1;
+}
+
+.slide {
+    display: none;
+}
+
+#title {
+    font-size: 100px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
