@@ -1,5 +1,9 @@
 var slideIndex = 0;
-const confettiSlides = [0, 2];
+const confettiSlides = [0, 45];
+const greySlides = [1, 19, 31, 44];
+const justTextSlides = [2, 15, 17, 18];
+const quoteSlides = [32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43];
+let confetti = [];
 
 // Next/previous controls
 const plusSlides = (n) => {
@@ -19,20 +23,40 @@ const displaySlide = (n) => {
         slides[i].style.display = "none";
     }
 
+
+
+    slides[slideIndex].style.display = "flex";
+    slides[slideIndex].style.alignItems = "center";
+        // slides[slideIndex].style.flexFlow = "row";
+
     const confetti = document.getElementById("canvas");
     if (confettiSlides.includes(slideIndex)) {
         confetti.style.display = "block";
         slides[slideIndex].style.color = "white";
+        slides[slideIndex].style.display = "block";
     } else {
         confetti.style.display = "none";
         slides[slideIndex].style.color = "black";
         // clearInterval(refreshIntervalId); // stop refreshing
     }
 
-    slides[slideIndex].style.display = "block";
-}
+    if (greySlides.includes(slideIndex)) {
+        document.body.style.backgroundColor = "#333333";
+        slides[slideIndex].style.color = "white";
+        slides[slideIndex].style.display = "block";
+    } else {
+        document.body.style.backgroundColor = "white";
+    }
 
-let confetti = [];
+    if (quoteSlides.includes(slideIndex)) {
+        slides[slideIndex].style.display = "block";
+        document.body.style.backgroundColor = "#fcfcfc";
+    }
+
+    if (justTextSlides.includes(slideIndex)) {
+        slides[slideIndex].style.display = "block";
+    } 
+}
 
 const confettiAnimation = () => {
     context.canvas.width = window.innerWidth;
@@ -55,6 +79,11 @@ const confettiAnimation = () => {
     });
 }
 
+const colors = ["#defde0", "#fddfdf", "#f0defd", "#def3fd", "#fcf7de"];
+const changeBackgroundColor = (index) => {
+    document.body.style.backgroundColor = colors[index % colors.length];
+} 
+
 const getRandomNum = (upTo) => upTo * Math.random();
 const getRandomColor = () => '#' + Math.floor((1 << 24) * Math.random()).toString(16);
 
@@ -67,7 +96,6 @@ const makeCircle = (y) => {
         getRandomNum(.5) - .25
     ))
 };
-
 
 document.onkeydown = (e) => {
     const keyCode = e.keyCode;

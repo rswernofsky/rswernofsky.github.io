@@ -9,17 +9,88 @@ canvas {
     z-index: -1;
 }
 
-.slide {
-    display: none;
-}
-
-#title {
-    font-size: 100px;
-}
-
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slideText {
+    width: 325px;
+}
+
+.slideImg {
+    width: 325px;
+}
+
+.slideImg img, video {
+    max-width: 100%;
+}
+
+.bigText {
+    font-size: 100px;
+    font-weight: 100;
+}
+
+h1 {
+    margin: 2.5rem 0 1rem;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: darkgrey;
+}
+
+#content ul {
+    padding: 0;
+}
+
+li {
+    text-align: center;
+    padding-right: 10px;
+    display: inline;
+    transition: font-size 0.5s ease;
+}
+
+li:hover {
+    font-size: 70px;
+}
+
+#nicknames, #zWords {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /* space go in between elements */
+}
+
+button {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    flex-basis: 22%;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    border: none;
+    background-color: #fcfcfc;
+    margin: 0 0 1rem 0;
+    /* border: 0px #ccc solid; */
+}
+
+button:hover {
+    background: #f0f0f0;
+}
+
+button:focus {
+    background: lightgrey;
+    outline: none;
 }
