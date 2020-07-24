@@ -162,6 +162,7 @@
 
 		const displayDesc = (description) => {
 			displayModal();
+			// modal.style.background = ;
 			document.getElementById(description).style.display = "block";
 		}
 
@@ -185,7 +186,7 @@
 			const projects = document.getElementsByClassName("project");
 
 			for (i = 0; i < projects.length; i++) { // hide all the descriptions
-				projects[i].style.backgroundColor = getRandomPastel();
+				projects[i].style.background = getRandomPastel();
 			}
 			// projects.array.forEach(element => element.style.backgroundColor = getRandomPastel());
 		}
