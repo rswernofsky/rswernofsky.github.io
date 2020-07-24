@@ -151,52 +151,6 @@
 		const contactForm = document.getElementById("contact-form");
 		const descriptions = document.getElementsByClassName("projectDesc");
 
-		// const confettiDesc = () => {
-		// 	displayModal();
-		// 	document.getElementById("confettiDesc").style.display = "block";
-		// }
-
-		// const snakeDesc = () => {
-		// 	displayModal();
-		// 	document.getElementById("snakeDesc").style.display = "block";
-		// }
-
-		// const dataStructDesc = () => {
-		// 	displayModal();
-		// 	document.getElementById("dataStructDesc").style.display = "block";
-		// }
-
-		// const animatorDesc = () => {
-		// 	displayModal();
-		// 	document.getElementById("animatorDesc").style.display = "block";
-		// }
-
-		// const marbleSolitaireDesc = () => {
-		// 	displayModal();
-		// 	document.getElementById("marbleSolitaireDesc").style.display = "block";
-		// }
-
-		// const mazeDesc = () => {
-		// 	displayModal();
-		// 	document.getElementById("mazeDesc").style.display = "block";
-		// }
-
-		// const automataDesc = () => {
-		// 	displayModal();
-		// 	document.getElementById("automataDesc").style.display = "block";
-		// }
-
-		// const huffmanDesc = () => {
-		// 	displayModal();
-		// 	document.getElementById("huffmanDesc").style.display = "block";
-		// }
-
-		// const picturesDesc = () => {
-		// 	displayModal();
-		// 	document.getElementById("picturesDesc").style.display = "block";
-		// }
-
-
 		const displayModal = () => {
 			modal.style.display = "block";
 			content.style.display = "none";
@@ -211,12 +165,32 @@
 			document.getElementById(description).style.display = "block";
 		}
 
-		// When the user clicks on (x), close the modal
 		closeModal.onclick = function () {
 			modal.style.display = "none";
 			content.style.display = "block";
 			contactForm.style.display = "block";
 		}
+
+		// const getRandomNum = (upTo) => upTo * Math.random();
+		const randomNumInRange = (from, to) => ((to - from) * Math.random()) + from;
+		const getRandomPastel = () => {
+			const from = 200;
+			const to = 255;
+			return '#' + Math.floor(randomNumInRange(from, to)).toString(16) +
+				Math.floor(randomNumInRange(from, to)).toString(16) +
+				Math.floor(randomNumInRange(from, to)).toString(16);
+		}
+
+		window.onload = () => {
+			const projects = document.getElementsByClassName("project");
+
+			for (i = 0; i < projects.length; i++) { // hide all the descriptions
+				projects[i].style.backgroundColor = getRandomPastel();
+			}
+			// projects.array.forEach(element => element.style.backgroundColor = getRandomPastel());
+		}
+		// const getRandomColor = () => '#' + Math.floor((1 << 24) * Math.random()).toString(16);
+
 	</script>
 </body>
 
