@@ -64,6 +64,7 @@ h3 {
 #content ul {
 	padding: 0 0 0 2rem;
     line-height: 175%;
+	font-weight: 300;
 }
 
 #intro {
@@ -99,12 +100,6 @@ nav li {
     border-radius: 1rem;
 	float: right;
 	margin: 0 0 0 1rem;
-}
-
-#content ul {
-	padding: 0 0 0 2rem;
-	line-height: 175%;
-	font-weight: 300;
 }
 
 hr {

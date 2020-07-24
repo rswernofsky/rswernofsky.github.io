@@ -9,8 +9,6 @@
     <link rel="manifest" href="/favicons/site.webmanifest">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@100&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="../style2.css">
     <link rel="stylesheet" href="happy-birthday-m0rc.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -25,166 +23,102 @@
     <div id="container">
         <div id="content">
 
-            <div class="slide">
-                <h2 class="bigText" style="text-align: center;">Happy Birthday Marc!</h2>
-                <p style="text-align: center;">Use the arrow keys to navigate!</p>
+            <div class="slide confetti">
+                <div>
+                    <h2 class="bigText" style="text-align: center;">Happy Birthday Marc!</h2>
+                    <p style="text-align: center;">Use the arrow keys to navigate!</p>
+                </div>
+            </div>
+
+            <div class="slide darkTheme">
+                <div>
+                    <h1>you're finally 19!</h1>
+                    <p>could it be? is it true?</p>
+                    <p>congrats on lasting another year (and incrementing your age tally)!</p>
+                    <p>now that I have your attention, I want to tell you all the things I appreciate about you!</p>
+                </div>
             </div>
 
             <div class="slide">
-                <h1>you're finally 19!</h1>
-                <p>could it be? is it true?</p>
-                <p>congrats on lasting another year (and incrementing your age tally)!</p>
-                <p>now that I have your attention, I want to tell you all the things I appreciate about you!</p>
-            </div>
-
-            <!-- <div class="slide">
-                <h2>your diverse names</h2>
-                <ul id="nicknames">
-                    <li id="nickname1">marc</li>
-                    <li id="nickname2">marcus</li>
-                    <li id="nickname3">m0rc</li>
-                    <li id="nickname4">marq</li>
-                </ul>
-            </div> -->
-
-            <!-- <div class="slide">
-                <h2>your diverse names</h2>
-                <div id="nicknames">
-                    <div class="nickname" id="n1">
-                        <button>marc</button>
-                    </div>
-                    <div class="nickname" id="n2">
-                        <button>marcus</button>
-                    </div>
-                    <div class="nickname" id="n3">
-                        <button>m0rc</button>
-                    </div>
-                    <div class="nickname" id="n4">
-                        <button>marq</button>
+                <div>
+                    <h2>your diverse names</h2>
+                    <div id="nicknames">
+                        <button class="nickname" id="n1" onclick="changeBackgroundColor(0)">marc</button>
+                        <button class="nickname" id="n2" onclick="changeBackgroundColor(1)">marcus</button>
+                        <button class="nickname" id="n3" onclick="changeBackgroundColor(2)">m0rc</button>
+                        <button class="nickname" id="n4" onclick="changeBackgroundColor(3)">marq</button>
                     </div>
                 </div>
-            </div> -->
-
-            <div class="slide">
-                <h2>your diverse names</h2>
-                <div id="nicknames">
-                    <button class="nickname" id="n1" onclick="changeBackgroundColor(0)">marc</button>
-                    <button class="nickname" id="n2" onclick="changeBackgroundColor(1)">marcus</button>
-                    <button class="nickname" id="n3" onclick="changeBackgroundColor(2)">m0rc</button>
-                    <button class="nickname" id="n4" onclick="changeBackgroundColor(3)">marq</button>
-                </div>
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>your mohawk</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/mohawk.PNG">
-                </div>
+                <h2>your mohawk</h2>
+                <img src="pictures/mohawk.PNG">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>your love of KGold</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/kgold.PNG">
-                </div>
+                <h2>your love of KGold</h2>
+                <img src="pictures/kgold.PNG">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>your fancy glasses</h2>
-                </div>
-                <div class="slideImg">
-                    <video controls>
-                        <source src="pictures/glasses.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <h2>your fancy glasses</h2>
+                <video controls>
+                    <source src="pictures/glasses.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>how attractive you look as a girl</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/girl.PNG">
-                </div>
+                <h2>how attractive you look as a girl</h2>
+                <img src="pictures/girl.PNG">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>your calm, cool, collected energy</h2>
-                </div>
-                <div class="slideImg">
-                    <video controls>
-                        <source src="pictures/calmcoolcollected.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <h2>your calm, cool, collected energy</h2>
+                <video controls>
+                    <source src="pictures/calmcoolcollected.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="slide">
-                <div class="slideText">
+                <div>
                     <h2>your insane EV apartment</h2>
                     <p>the view is absurd?!?!</p>
                 </div>
-                <div class="slideImg">
-                    <img src="pictures/ev.JPG">
-                </div>
+                <img src="pictures/ev.JPG">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>your alignment charts</h2>
-                </div>
-                <div class="slideImg">
-                    <video controls>
-                        <source src="pictures/alignment.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <h2>your alignment charts</h2>
+                <video controls>
+                    <source src="pictures/alignment.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>how you keep your old facebook profile photos around for our enjoyment</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/oldfacebookpics.PNG">
-                </div>
+                <h2>how you keep your old facebook profile photos around for our enjoyment</h2>
+                <img src="pictures/oldfacebookpics.PNG">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>your use of venmo as a social media</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/venmo.PNG">
-                </div>
+                <h2>your use of venmo as a social media</h2>
+                <img src="pictures/venmo.PNG">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>your ass stance</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/assstance.png">
-                </div>
+                <h2>your ass stance</h2>
+                <img src="pictures/assstance.png">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>how far you can lEAP</h2>
-                </div>
-                <div class="slideImg">
-                    <video controls>
-                        <source src="pictures/leap.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <h2>how far you can lEAP</h2>
+                <video controls>
+                    <source src="pictures/leap.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="slide">
-                <div class="slideText">
+                <div>
                     <h2>your emoji usage</h2>
                     <ul id="emojis">
                         <li id="emoji1">🥵</li>
@@ -198,61 +132,32 @@
                         <li id="emoji8">🛸</li>
                     </ul>
                 </div>
-                <div class="slideImg">
-                    <img src="pictures/leg.PNG">
-                </div>
+                <img src="pictures/leg.PNG">
             </div>
 
-            <!-- <div class="slide">
-                <h2>your emoji usage</h2>
-                <div id="emojis">
-                    <button>🥵</button>
-                    <button>🍳</button>
-                    <button>🤺</button>
-                    <button>🦵</button>
-                    <button>🚨</button>
-                    <button>🥺</button>
-                    <button>🥴</button>
-                    <button>🕺</button>
-                </div>
-            </div> -->
-
-            <!-- <div class="slide">
-                <h2>your opportunistic use of the letter z</h2>
-                <ul id="zWords">
-                    <li id="z1">inzerted</li>
-                    <li id="z2">tezla</li>
-                    <li id="z3">bazically</li>
-                    <li id="z4">verboze</li>
-                    <li id="z5">condenze</li>
-                    <li id="z6">rebaze</li>
-                    <li id="z7">conzumer</li>
-                </ul>
-            </div> -->
-
             <div class="slide">
-                <h2>your opportunistic use of the letter z</h2>
-                <div id="zWords">
-                    <button onclick="changeBackgroundColor(0)">inzerted</button>
-                    <button onclick="changeBackgroundColor(1)">tezla</button>
-                    <button onclick="changeBackgroundColor(2)">bazically</button>
-                    <button onclick="changeBackgroundColor(3)">verboze</button>
-                    <button onclick="changeBackgroundColor(4)">condenze</button>
-                    <button onclick="changeBackgroundColor(5)">rebaze</button>
-                    <button onclick="changeBackgroundColor(6)">conzumer</button>
+                <div>
+                    <h2>your opportunistic use of the letter z</h2>
+                    <div id="zWords">
+                        <button onclick="changeBackgroundColor(0)">inzerted</button>
+                        <button onclick="changeBackgroundColor(1)">tezla</button>
+                        <button onclick="changeBackgroundColor(2)">bazically</button>
+                        <button onclick="changeBackgroundColor(3)">verboze</button>
+                        <button onclick="changeBackgroundColor(4)">condenze</button>
+                        <button onclick="changeBackgroundColor(5)">rebaze</button>
+                        <button onclick="changeBackgroundColor(6)">conzumer</button>
+                    </div>
                 </div>
             </div>
 
             <div class="slide">
-                <div class="slideText">
+                <div>
                     <h2>SAXOPHONE</h2>
                     <p>so classy</p>
                 </div>
-                <div class="slideImg">
-                    <video controls>
-                        <source src="pictures/sax.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <video controls>
+                    <source src="pictures/sax.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="slide">
@@ -260,13 +165,17 @@
             </div>
 
             <div class="slide">
-                <h2>how much you want to see your friends succeed!</h2>
-                <p>you're so encouraging!!! you push me to be a better person!</p>
+                <div>
+                    <h2>how much you want to see your friends succeed!</h2>
+                    <p>you're so encouraging!!! you push me to be a better person!</p>
+                </div>
             </div>
 
-            <div class="slide">
-                <h1>we've been through a lot together the past year!</h1>
-                <p>some of my favorite memories include:</p>
+            <div class="slide darkTheme">
+                <div>
+                    <h1>we've been through a lot together the past year!</h1>
+                    <p>some of my favorite memories include:</p>
+                </div>
             </div>
 
             <div class="slide">
@@ -274,32 +183,20 @@
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>kayaking on the Charles during one of the first weeks of school</h2>
-                </div>
-                <div class="slideImg">
-                    <video controls>
-                        <source src="pictures/kayaking.MP4" type="video/mp4">
-                    </video>
-                </div>
+                <h2>kayaking on the Charles during one of the first weeks of school</h2>
+                <video controls>
+                    <source src="pictures/kayaking.MP4" type="video/mp4">
+                </video>
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>stwest popups</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/stwest.PNG">
-                </div>
+                <h2>stwest popups</h2>
+                <img src="pictures/stwest.PNG">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>friendsgiving</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/friendsgiving.JPG">
-                </div>
+                <h2>friendsgiving</h2>
+                <img src="pictures/friendsgiving.JPG">
             </div>
 
             <div class="slide">
@@ -307,136 +204,137 @@
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>being very sleep-deprived at HackBeanPot</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/hackbeanpot.JPG">
-                </div>
+                <h2>being very sleep-deprived at HackBeanPot</h2>
+                <img src="pictures/hackbeanpot.JPG">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>getting to spend time with the Bacvanski family over Thanksgiving break!</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/thanksgiving.png">
-                </div>
+                <h2>getting to spend time with the Bacvanski family over Thanksgiving break!</h2>
+                <img src="pictures/thanksgiving.png">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>dressing up and going to that boat party!</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/boat.JPG">
-                </div>
+                <h2>dressing up and going to that boat party!</h2>
+                <img src="pictures/boat.JPG">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>hiking in the Rancho San Antonio open space preserve over Spring break</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/rancho.jpg">
-                </div>
+                <h2>hiking in the Rancho San Antonio open space preserve over Spring break</h2>
+                <img src="pictures/rancho.jpg">
             </div>
 
             <div class="slide">
-                <div class="slideText">
-                    <h2>borrowing your bucket hat</h2>
-                </div>
-                <div class="slideImg">
-                    <img src="pictures/hat.JPG">
+                <h2>borrowing your bucket hat</h2>
+                <img src="pictures/hat.JPG">
+            </div>
+
+            <div class="slide">
+                <h2>endless hours of OOD video calls</h2>
+                <img src="pictures/ood.png">
+            </div>
+
+            <div class="slide darkTheme">
+                <div>
+                    <p>it's not just me who thinks you're pretty cool</p>
+                    <h1>here's what others appreciate about Marcus Bacvanski:</h1>
                 </div>
             </div>
 
-            <div class="slide">
-                <div class="slideText">
-                    <h2>endless hours of OOD video calls</h2>
+            <div class="slide quote">
+
+                <div>
+                    <h2>"his fire dance moves"</h2>
+                    <h3>- Sumedha Rajesh</h3>
                 </div>
-                <div class="slideImg">
-                    <img src="pictures/ood.png">
+            </div>
+
+            <div class="slide quote">
+                <div>
+                    <h2>"his calming aura"</h2>
+                    <h3>- Anish Mukherjee</h3>
                 </div>
             </div>
 
-            <div class="slide">
-                <p>it's not just me who thinks you're pretty cool</p>
-                <h1>here's what others appreciate about Marcus Bacvanski:</h1>
+            <div class="slide quote">
+                <div>
+                    <h2>"his cadence"</h2>
+                    <h3>- Vedant Rautela</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"his fire dance moves"</h2>
-                <h3>- Sumedha Rajesh</h3>
+            <div class="slide quote">
+                <div>
+                    <h2>"aesthetic"</h2>
+                    <h3>- Katherine Huang</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"his calming aura"</h2>
-                <h3>- Anish Mukherjee</h3>
+            <div class="slide quote">
+                <div>
+                    <h2>"his quirkiness?"</h2>
+                    <h3>- Cassandra Moe</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"his cadence"</h2>
-                <h3>- Vedant Rautela</h3>
+            <div class="slide quote">
+                <div>
+                    <h2>"My favorite thing about Marcus would have to be his manner of making jokes"</h2>
+                    <h3>- Jack Wilkins</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"aesthetic"</h2>
-                <h3>- Katherine Huang</h3>
+            <div class="slide quote">
+                <div>
+                    <h2>"sense of humor: quirky and remarcably consistent"</h2>
+                    <h3>- Aidan Sullivan</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"his quirkiness?"</h2>
-                <h3>- Cassandra Moe</h3>
+            <div class="slide quote">
+                <div>
+                    <h2>"Marc’s outwardly positive energy and cute smile and mutual appreciation of Lorde despite his
+                        distasteful other opinions in that regard"</h2>
+                    <h3>- Nicholas Alonzo</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"My favorite thing about Marcus would have to be his manner of making jokes"</h2>
-                <h3>- Jack Wilkins</h3>
+            <div class="slide quote">
+                <div>
+                    <h2>"He’s so humble. I don’t think he realizes how talented/kind/thoughtful he is. Also he has great
+                        taste in books !!!"</h2>
+                    <h3>- Rayne Skillin</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"sense of humor: quirky and remarcably consistent"</h2>
-                <h3>- Aidan Sullivan</h3>
+            <div class="slide quote">
+                <div>
+                    <h2>"his desire to learn and try new things"</h2>
+                    <h3>- Jeffrey Wallace</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"Marc’s outwardly positive energy and cute smile and mutual appreciation of Lorde despite his
-                    distasteful other opinions in that regard"</h2>
-                <h3>- Nicholas Alonzo</h3>
+            <div class="slide quote">
+                <div>
+                    <h2>"I really admire how passionate he is about the things he does and his commitment to them"</h2>
+                    <h3>- Rotem Leshed</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"He’s so humble. I don’t think he realizes how talented/kind/thoughtful he is. Also he has great
-                    taste in books !!!"</h2>
-                <h3>- Rayne Skillin</h3>
+            <div class="slide quote">
+                <div>
+                    <h2>"the fact that he has his life together and knows what he wants"</h2>
+                    <h3>- Brian Ma</h3>
+                </div>
             </div>
 
-            <div class="slide">
-                <h2>"his desire to learn and try new things"</h2>
-                <h3>- Jeffrey Wallace</h3>
-            </div>
-
-            <div class="slide">
-                <h2>"I really admire how passionate he is about the things he does and his commitment to them"</h2>
-                <h3>- Rotem Leshed</h3>
-            </div>
-
-            <div class="slide">
-                <h2>"the fact that he has his life together and knows what he wants"</h2>
-                <h3>- Brian Ma</h3>
-            </div>
-
-            <div class="slide">
+            <div class="slide darkTheme">
                 <h1>you're an amazing human and I'm so happy I get to call you my friend :)</h1>
             </div>
 
-            <div class="slide">
+            <div class="slide confetti">
                 <h2 class="bigText" style="text-align: center;">Enjoy 19!</h2>
             </div>
         </div>
-
-    </div>
 
     </div>
 </body>

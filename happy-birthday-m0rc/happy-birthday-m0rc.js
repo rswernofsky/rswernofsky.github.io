@@ -1,9 +1,6 @@
 var slideIndex = 0;
-const confettiSlides = [0, 45];
-const greySlides = [1, 19, 31, 44];
-const justTextSlides = [2, 15, 17, 18];
-const quoteSlides = [32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43];
 let confetti = [];
+const fps = 30;
 
 // Next/previous controls
 const plusSlides = (n) => {
@@ -12,50 +9,52 @@ const plusSlides = (n) => {
 
 const displaySlide = (n) => {
     var i;
-    var slides = document.getElementsByClassName("slide");
+    const slides = document.getElementsByClassName("slide");
     if (n >= slides.length) {
-        slideIndex = slides.length - 1
+        slideIndex = slides.length - 1;
     }
     if (n < 0) {
-        slideIndex = 0
+        slideIndex = 0;
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
+    const slide = slides[slideIndex];
+    const theStyleInQuestion = slide.style;
 
+    theStyleInQuestion.display = "grid";
+    theStyleInQuestion.gridTemplateColumns = "repeat(auto-fit, minmax(200px, 1fr))";
+    theStyleInQuestion.columnGap = "2rem";
+    theStyleInQuestion.rowGap = "2rem";
+    theStyleInQuestion.alignItems = "center";
 
-    slides[slideIndex].style.display = "flex";
-    slides[slideIndex].style.alignItems = "center";
-        // slides[slideIndex].style.flexFlow = "row";
+    // unique styling based on HTML class tags
+    const slideClassNames = slide.className.split(' ');
 
     const confetti = document.getElementById("canvas");
-    if (confettiSlides.includes(slideIndex)) {
+    if (slideClassNames.includes('confetti')) {
         confetti.style.display = "block";
-        slides[slideIndex].style.color = "white";
-        slides[slideIndex].style.display = "block";
+        theStyleInQuestion.color = "white";
+
+        clearInterval(refreshIntervalId); // prevent interval from getting infinitely faster
+        confettiAnimation();
+        refreshIntervalId = setInterval(confettiAnimation, 1000 / fps);
     } else {
         confetti.style.display = "none";
-        slides[slideIndex].style.color = "black";
-        // clearInterval(refreshIntervalId); // stop refreshing
+        clearInterval(refreshIntervalId);
     }
 
-    if (greySlides.includes(slideIndex)) {
+    if (slideClassNames.includes('darkTheme')) {
         document.body.style.backgroundColor = "#333333";
-        slides[slideIndex].style.color = "white";
-        slides[slideIndex].style.display = "block";
+        theStyleInQuestion.color = "white";
     } else {
         document.body.style.backgroundColor = "white";
     }
 
-    if (quoteSlides.includes(slideIndex)) {
-        slides[slideIndex].style.display = "block";
-        document.body.style.backgroundColor = "#fcfcfc";
+    if (slideClassNames.includes('quote')) {
+        document.body.style.backgroundColor = "#fcfcfc"; // subtle grey
     }
-
-    if (justTextSlides.includes(slideIndex)) {
-        slides[slideIndex].style.display = "block";
-    } 
 }
 
 const confettiAnimation = () => {
@@ -110,9 +109,7 @@ window.onload = () => {
     canvas = $('#canvas')[0];
     context = canvas.getContext('2d');
 
-    // confetti goes the whole time (but it's hidden sometimes)
-    const fps = 30;
-    confettiAnimation();
+    // initialize refreshIntervalId
     refreshIntervalId = setInterval(confettiAnimation, 1000 / fps);
 
     displaySlide(slideIndex = 0);
