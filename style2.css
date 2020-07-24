@@ -56,12 +56,12 @@ h3 {
 	font-weight: 100;
 	margin: 0 0 0 0;
     font-size: 45px;
-    /* color: black; */
+    color: black;
 	text-decoration: none;
 	margin-left: -0.3rem;
 }
 
-#content ul {
+#content ul, #modal ul {
 	padding: 0 0 0 2rem;
     line-height: 175%;
 	font-weight: 300;
@@ -88,6 +88,70 @@ nav li {
     display: inline-block;
 	font-size: 17px;
 	margin: 0 0.5rem 0 0;
+}
+
+.blockDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    column-gap: 1rem;
+	row-gap: 1rem;
+	align-items: center;
+	margin: 1.5rem 0 0 0;
+	/* justify-content: center; */
+}
+
+#modal {
+	display: none; /* hidden by default */
+	background-color: #fcfcfc;
+	height: max-content;
+	width: auto;
+	margin: 1.5rem 0 0 0;
+	padding: 0 0 0.5rem 0;
+}
+
+.projectDesc {
+	display: hidden;
+	margin: 1rem;
+}
+
+#closeModal {
+	margin: 0.5rem 0 0 0.5rem;
+	border: none;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 0.25rem;
+	background-color: #fcfcfc;
+	font-family: 'Lato', sans-serif;
+}
+
+#closeModal:hover {
+    background: #f0f0f0;
+}
+
+#closeModal:focus {
+    background: lightgrey;
+    outline: none;
+}
+
+.project {
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+
+	/* font-family: 'Lato', sans-serif; */
+	border-radius: 0.5rem;
+	height: 8rem;
+    border: none;
+	background-color: #fcfcfc;
+	padding: 1rem;
+}
+
+.project:hover {
+    background: #f0f0f0;
+}
+
+.project:focus {
+    background: lightgrey;
+    outline: none;
 }
 
 #canvas {
