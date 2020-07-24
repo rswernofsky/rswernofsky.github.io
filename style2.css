@@ -141,16 +141,16 @@ nav li {
 	border-radius: 0.5rem;
 	height: 8rem;
     border: none;
-	background-color: #fcfcfc;
+	/* background-color: #fcfcfc; */
 	padding: 1rem;
 }
 
-.project:hover {
+/* .project:hover {
     background: #f0f0f0;
-}
+} */
 
 .project:focus {
-    background: lightgrey;
+    /* background: lightgrey; */
     outline: none;
 }
 
