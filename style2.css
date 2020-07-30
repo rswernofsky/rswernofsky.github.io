@@ -40,15 +40,17 @@ p {
 } */
 
 h2 {
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
     margin: 2.5rem 0 1rem;
 	font-size: 27px;
+	font-weight: 100;
 }
 
 h3 {
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
     margin: 1.5rem 0 0.5rem;
 	font-size: 20px;
+	font-weight: 100;
 }
 
 #title {
