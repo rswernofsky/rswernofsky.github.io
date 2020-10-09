@@ -2,238 +2,275 @@
 <title>Rebecca Swernofsky's Projects</title>
 
 <head>
-	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-	<link rel="manifest" href="/favicons/site.webmanifest">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-	        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	        crossorigin="anonymous"></script> -->
-	<!-- jquery -->
-	<link rel="stylesheet" href="style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script> -->
+    <!-- jquery -->
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body class="body">
 
-	<div id="container">
+    <div id="container">
 
-		<h1><a href="/" id="title">Rebecca Swernofsky</a></h1>
-		<nav>
-			<ul>
-				<li><a href="/about">About</a></li>
-				<li><a href="/projects">Projects</a></li>
-				<li><a href="/lists">Lists</a></li>
-			</ul>
-		</nav>
-		<div id="content">
-			<h2>Projects</h2>
-			<h3>Programming-Related Projects</h3>
-			<div class="blockDisplay">
-				<button class="project" onclick="displayDesc('confettiDesc')">Confetti Slides</button>
-				<button class="project" onclick="displayDesc('snakeDesc')">Snake</button>
-				<button class="project" onclick="displayDesc('dataStructDesc')">Java Data Structures</button>
-				<button class="project" onclick="displayDesc('animatorDesc')">Easy Animator</button>
-				<button class="project" onclick="displayDesc('marbleSolitaireDesc')">Marble Solitaire</button>
-				<button class="project" onclick="displayDesc('mazeDesc')">Maze Generation & Solving</button>
-				<button class="project" onclick="displayDesc('automataDesc')">Cellular Automata</button>
-				<button class="project" onclick="displayDesc('huffmanDesc')">Huffman Encoding</button>
-				<button class="project" onclick="displayDesc('picturesDesc')">Squeezing Pictures</button>
-			</div>
+        <h1><a href="/" id="title">Rebecca Swernofsky</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/lists">Lists</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <h2>Projects</h2>
+            <!-- <h3>Programming-Related Projects</h3> -->
+            <div class="blockDisplay">
+                <button class="project" onclick="displayDesc('confettiDesc')">Confetti Slides</button>
+                <button class="project" onclick="displayDesc('snakeDesc')">Snake</button>
+                <button class="project" onclick="displayDesc('dataStructDesc')">Java Data Structures</button>
+                <button class="project" onclick="displayDesc('animatorDesc')">Easy Animator</button>
+                <button class="project" onclick="displayDesc('marbleSolitaireDesc')">Marble Solitaire</button>
+                <button class="project" onclick="displayDesc('mazeDesc')">Maze Generation & Solving</button>
+                <button class="project" onclick="displayDesc('automataDesc')">Cellular Automata</button>
+                <button class="project" onclick="displayDesc('huffmanDesc')">Huffman Encoding</button>
+                <button class="project" onclick="displayDesc('picturesDesc')">Squeezing Pictures</button>
+                <button class="project" onclick="displayDesc('assemQuicksort')">Assembly Quicksort</button>
+                <button class="project" onclick="displayDesc('cDataStructs')">C Data Structures</button>
+            </div>
 
-			<h3>Other Projects</h3>
-			<div class="blockDisplay">
-				<button class="project" onclick="displayDesc('coverDesc')">Cover to Cover</button>
-				<button class="project" onclick="displayDesc('recipesDesc')">Reb's Recipes</button>
-			</div>
-		</div>
+            <h3>Other Projects</h3>
+            <div class="blockDisplay">
+                <button class="project" onclick="displayDesc('coverDesc')">Cover to Cover</button>
+                <button class="project" onclick="displayDesc('recipesDesc')">Reb's Recipes</button>
+            </div>
+        </div>
 
-		<div id="contact-form">
-			<hr> <!-- horizontal line -->
-			<h3>Interested in the source code?</h3>
-			<p>Email me at <a href="mailto:rswernofsky@gmail.com">rswernofsky@gmail.com</a> and I can grant you
-				access to the source code of the projects that are currently private!</p>
-		</div>
+        <div id="contact-form">
+            <hr> <!-- horizontal line -->
+            <h3>Interested in the source code?</h3>
+            <p>Email me at <a href="mailto:rswernofsky@gmail.com">rswernofsky@gmail.com</a> and I can grant you
+                access to the source code of the projects that are currently private!</p>
+        </div>
 
-		<div id="modal">
-			<button id="closeModal"> x </button>
-			<div class="projectDesc" id="confettiDesc">
-				<h2 class="projectTitle">Confetti Slides</h2>
-				<p>I made my friend an interactive website that had celebratory confetti for his birthday! Then I made a
-					template of it for others to use! See the template live <a
-						href="/projects/confetti-slides">here</a> and also check out the source code <a
-						href="https://github.com/rswernofsky/confetti-slides">here</a>.</p>
-			</div>
-			<div class="projectDesc" id="snakeDesc">
-				<h2 class="projectTitle">Snake</h2>
-				<p>My (very condensed) version of the classic arcade game, built with Javascript Canvas.</p>
-				<p>Play it live <a href="/projects/snake">here</a> or look at the source code <a href="
+        <div id="modal">
+            <button id="closeModal">x</button>
+            <div class="projectDesc" id="confettiDesc">
+                <h2 class="projectTitle">Confetti Slides</h2>
+                <p>My friend's birthday was coming up, and I wanted to somehow celebrate with a website and confetti.
+                    None
+                    of the slideshow-creation services I know of include confetti, so I made my own! And then I made a
+                    template of it for others to use! Experience the interactive web experience live <a
+                        href="/projects/confetti-slides">here</a>
+                    and also check out the source code <a
+                        href="https://github.com/rswernofsky/confetti-slides">here</a>.</p>
+            </div>
+            <div class="projectDesc" id="snakeDesc">
+                <h2 class="projectTitle">Snake</h2>
+                <p>My (very condensed) version of the classic arcade game, built with Javascript Canvas.</p>
+                <p>Play it live <a href="/projects/snake">here</a> or look at the source code <a href="
 							https://github.com/rswernofsky/Snake">here</a>.</p>
-			</div>
-			<div class="projectDesc" id="dataStructDesc">
-				<h2 class="projectTitle">Java Data Structures</h2>
-				<p>I made and used an assortment of different data structures during my enrollment in Northeastern's
-					<a href="https://course.ccs.neu.edu/cs2510a">CS 2510 Accelerated</a> course, taught by <a
-						href="https://www.khoury.northeastern.edu/people/benjamin-lerner/">Benjamin Lerner</a>.</p>
-				<p>These include:</p>
-				<ul>
-					<li>binary search trees</li>
-					<li>deques (double-ended queues)</li>
-					<li>multiple representations of non-mutable lists</li>
-					<li>orderable multisets</li>
-					<li>stacks and queues</li>
-				</ul>
-				<p>Because these data structures were made using the guidance of the homeworks, labs, lectures, and
-					exams,
-					the instructor has required that the code be kept private, but can be made available by request.
-				</p>
-			</div>
-			<div class="projectDesc" id="animatorDesc">
-				<h2 class="projectTitle">Easy Animator</h2>
-				<p>Coming soon!</p>
-			</div>
-			<div class="projectDesc" id="marbleSolitaireDesc">
-				<h2 class="projectTitle">Marble Solitaire</h2>
-				<p>Coming soon!</p>
-			</div>
-			<div class="projectDesc" id="mazeDesc">
-				<h2 class="projectTitle">Maze Generation & Solving</h2>
-				<p>Coming soon!</p>
-			</div>
-			<div class="projectDesc" id="automataDesc">
-				<h2 class="projectTitle">Cellular Automata</h2>
-				<p>This project was created based on <a href="https://course.ccs.neu.edu/cs2510a/assignment7.html">this
-						assignment</a> for Northeastern's CS 2510 Accelerated course. It models simple binary
-					rule-based
-					cellular automata, arranged in a line. The program starts with a single row of square cells
-					whose
-					states
-					are either on or off. On every tick, a new row of children cells are generated from the previous
-					row
-					using a specified rule. Certain rules cause interesting patterns to emerge.</p>
-				<p>The source code is kept private by instructor policy, but can be made public upon request!</p>
-			</div>
-			<div class="projectDesc" id="huffmanDesc">
-				<h2 class="projectTitle">Huffman Encoding</h2>
-				<p>This project is a <a href="https://en.wikipedia.org/wiki/Huffman_coding">Huffman encoding</a>
-					program: given an alphabet and the relative frequencies of each
-					letter, it creates a binary code for each letter, such that letters that show up more in the
-					language
-					(have larger frequencies) will have shorter codes, while letters that show up less often in the
-					language (have
-					smaller frequencies) will have longer codes. When using a code to represent a word in a
-					language, on
-					average, a code produced through Huffman encoding will be shorter than an encoding algorithm
-					that
-					gives every
-					letter a code with the same length.
-				<p>This project was created using the instructions for problem 3 in <a
-						href="https://course.ccs.neu.edu/cs2510a/assignment6.html">this assignment</a> for
-					Northeastern's CS
-					2510 Accelerated course. By instructor policy, the source code can only be made public by
-					request.
-				</p>
-			</div>
-			<div class="projectDesc" id="picturesDesc">
-				<h2 class="projectTitle">Squeezing Pictures</h2>
-				<p>Coming soon!</p>
-			</div>
-			<div class="projectDesc" id="coverDesc">
-				<h2 class="projectTitle">Cover to Cover</h2>
-				<p>Cover to Cover is a film my partner and I made during our senior year of high school for our Film
-					Analysis class. In class we learned about how elements such as cinematography, color, sound (and
-					music), lighting, acting, dialogue, editing, and length of scenes can be used to create amazing
-					films. One of the main lessons of the class was that these elements can be used to tell a story
-					without explicitly saying what's going on in each scene. </p>
-				<p>My partner and I tried to capture this, telling the story of a book throughout its lifetime
-					without
-					(many) words. The film uses everything we learned over the course of the year, and it even won
-					the
-					"Best Cinematography" award at our school's Film Showcase! Click <a
-						href="https://drive.google.com/file/d/1bKLmZaigdEGFXMJwfTdaVB_zPFFbBv61/view?usp=sharing">here</a>
-					to see it!</p>
-			</div>
-			<div class="projectDesc" id="recipesDesc">
-				<h2 class="projectTitle">Reb's Recipes</h2>
-				<p>I finally have my own kitchen and I've been experimenting with cooking/baking a lot! It's not currently anywhere close to complete, but this is where I'll accumulate recipes that I love and use frequently! Check it out <a href="/rebs-recipes">here</a>.</p>
-			</div>
-		</div>
-	</div>
+            </div>
+            <div class="projectDesc" id="dataStructDesc">
+                <h2 class="projectTitle">Java Data Structures</h2>
+                <p>I made and used an assortment of different data structures during my enrollment in Northeastern's
+                    <a href="https://course.ccs.neu.edu/cs2510a">CS 2510 Accelerated</a> course, including:</p>
+                <ul>
+                    <li>binary search trees</li>
+                    <li>deques (double-ended queues)</li>
+                    <li>multiple representations of non-mutable lists</li>
+                    <li>orderable multisets</li>
+                    <li>stacks and queues</li>
+                </ul>
+                <p>Check out the source code <a href="https://github.com/rswernofsky/java-data-structures">here</a>!</p>
+                <!-- <p>Because these data structures were made using the guidance of the homeworks, labs, lectures, and
+                exams,
+                the instructor has required that the code be kept private, but can be made available by request.
+            </p> -->
+            </div>
+            <div class="projectDesc" id="animatorDesc">
+                <h2 class="projectTitle">Easy Animator</h2>
+                <p>An interactive editor for creating simple animations with keyframes. Built with my friend <a
+                        href="https://mbacvanski.github.io/">Marc</a> in Java with significant
+                    attention to design (including using the MVC pattern). Supported shapes include rectangles and
+                    ovals, and supported operations include transformation, resizing, color changes, and rotation. There
+                    are multiple viewing formats, including text, SVG, visual view-only, and an editing mode.</p>
+                <p>This project was created for a class I took called <a
+                        href="https://course.ccs.neu.edu/cs3500/">Object-Oriented Design</a>. The instructor has
+                    requested that the source code not be made public, but it can be viewed by private request!</p>
+            </div>
+            <div class="projectDesc" id="marbleSolitaireDesc">
+                <h2 class="projectTitle">Marble Solitaire</h2>
+                <p>A text-based game of Marble Solitaire, made using the MVC (model, view, controller) design pattern.
+                    Different boards can be played using command-line arguments. </p>
+                <p>This project was created for a class I took called <a
+                        href="https://course.ccs.neu.edu/cs3500/">Object-Oriented Design</a>. The instructor has
+                    requested that the source code not be made public, but it can be viewed by private request!</p>
+            </div>
+            <div class="projectDesc" id="mazeDesc">
+                <h2 class="projectTitle">Maze Generation & Solving</h2>
+                <p>Coming soon!</p>
+            </div>
+            <div class="projectDesc" id="automataDesc">
+                <h2 class="projectTitle">Cellular Automata</h2>
+                <p>This project was created to solve problem 1 of <a
+                        href="https://course.ccs.neu.edu/cs2510a/assignment7.html">this
+                        assignment</a> for Northeastern's CS 2510 Accelerated course. It models simple binary
+                    rule-based cellular automata, arranged in a line. The program starts with a single row of square
+                    cells whose states are either on or off. On every tick, a new row of children cells are generated
+                    from the previous row using the binary representation of a specified rule. Certain rules cause
+                    interesting patterns to emerge. Try out 30, 54, 60, and 182! </p>
+                <p>Check out my original solution <a href="https://github.com/rswernofsky/cellular-automata">here</a>,
+                    and a rewrite <a href="https://github.com/rswernofsky/updated-cellular-automata">here</a>!</p>
+                <!-- <p>The source code is kept private by instructor policy, but can be made public upon request!</p> -->
+            </div>
+            <div class="projectDesc" id="huffmanDesc">
+                <h2 class="projectTitle">Huffman Encoding</h2>
+                <p>This project is a <a href="https://en.wikipedia.org/wiki/Huffman_coding">Huffman encoding</a>
+                    program, created for problem 3 in <a href="https://course.ccs.neu.edu/cs2510a/assignment6.html">this
+                        assignment</a> for Northeastern's CS 2510 Accelerated course.</p>
+                <p>Given an alphabet and the relative frequencies of each
+                    letter, it creates a binary code for each letter, such that letters that show up more in the
+                    language (have larger frequencies) will have shorter codes, while letters that show up less often in
+                    the language (have smaller frequencies) will have longer codes. When using a code to represent a
+                    word in a language, on average, a code produced through Huffman encoding will be shorter than an
+                    encoding algorithm that gives every letter a code with the same length.
+                <p>Look at the source code <a href="https://github.com/rswernofsky/huffman-encoding">here</a>!</p>
+                <!-- <p>By instructor policy, the source code can only be made public by
+            request.</p> -->
+            </div>
+            <div class="projectDesc" id="picturesDesc">
+                <h2 class="projectTitle">Squeezing Pictures</h2>
+                <p>An interface for squishing photos using seam carving! A photo is represented by a graph structure of
+                    pixels, which each have a value associated with how "important" they are to the image based on
+                    differences in the brightnesses of the pixels around them. Seams are found by finding the cheapest
+                    path through the image and removing those pixels with garbage collection through careful
+                    rearrangement of pointers.</p>
+                <p>Interesting features include toggling between color view, black and
+                    white, and a heatmap, as well as toggling between vertical and horizontal seam removal, and painting
+                    the seams before removing them. </p>
+                <p>This project is based on <a href="https://course.ccs.neu.edu/cs2510asp20/assignment8.html">this
+                        assignment</a>.</p>
+            </div>
+            <div class="projectDesc" id="assemQuicksort">
+                <h2 class="projectTitle">Assembly Quicksort</h2>
+                <p><a href="https://en.wikipedia.org/wiki/Quicksort">Quicksort</a>, ported from C to x86 assembly. It
+                    was built
+                    for <a href="https://ntuck-neu.site/2020-09/cs3650/">Computer Systems</a>, a class I'm currently
+                    taking in Fall 2020, so you'll need to ask me for the source code (it can't be shared publicly).</p>
+            </div>
+            <div class="projectDesc" id="cDataStructs">
+                <h2 class="projectTitle">C Data Structures</h2>
+                <p>Several different data structures in C built for my <a
+                        href="https://ntuck-neu.site/2020-09/cs3650/">Computer Systems</a> class, including:</p>
+                <ul>
+                    <li>a hashmap using <a href="https://en.wikipedia.org/wiki/Linear_probing">linear probing</a></li>
+                    <li>a hashmap using linked lists</li>
+                    <li>a vector (a dynamically growing array)</li>
+                    <li>a linked list</li>
+                </ul>
+            </div>
+            <div class="projectDesc" id="coverDesc">
+                <h2 class="projectTitle">Cover to Cover</h2>
+                <p>Cover to Cover is a film my partner and I made during our senior year of high school for our Film
+                    Analysis class. In class we learned about how elements such as cinematography, color, sound (and
+                    music), lighting, acting, dialogue, editing, and length of scenes can be used to create a message
+                    without explicitly saying it.</p>
+                <p>This film shows the story of a book throughout its lifetime without (many) words. The film uses
+                    everything we learned over the course of the year, and it even won the
+                    "Best Cinematography" award at our school's Film Showcase! Click <a
+                        href="https://drive.google.com/file/d/1ODJK2f7NfvD69__wn-JiPpmxmoPo0ghQ/view?usp=sharing">here</a>
+                    to see it!</p>
+            </div>
+            <div class="projectDesc" id="recipesDesc">
+                <h2 class="projectTitle">Reb's Recipes</h2>
+                <p>I love experimenting with cooking/baking, and thought I'd accumulate the recipes that I love and use
+                    frequently in one place! It's
+                    currently a work in progress, but you can check out future recipes <a href="/rebs-recipes">here</a>.
+                </p>
+            </div>
+        </div>
+    </div>
 
 
-	<script>
-		const modal = document.getElementById("modal");
-		const closeModal = document.getElementById("closeModal");
-		const content = document.getElementById("content");
-		const contactForm = document.getElementById("contact-form");
-		const descriptions = document.getElementsByClassName("projectDesc");
 
-		const displayModal = () => {
-			modal.style.display = "block";
-			content.style.display = "none";
-			contactForm.style.display = "none";
-			for (i = 0; i < descriptions.length; i++) { // hide all the descriptions
-				descriptions[i].style.display = "none";
-			}
-		}
+    <script>
+        const modal = document.getElementById("modal");
+        const closeModal = document.getElementById("closeModal");
+        const content = document.getElementById("content");
+        const contactForm = document.getElementById("contact-form");
+        const descriptions = document.getElementsByClassName("projectDesc");
 
-		const displayDesc = (description) => {
-			displayModal();
-			// modal.style.background = ;
-			document.getElementById(description).style.display = "block";
-		}
+        const displayModal = () => {
+            modal.style.display = "block";
+            content.style.display = "none";
+            contactForm.style.display = "none";
+            for (i = 0; i < descriptions.length; i++) { // hide all the descriptions
+                descriptions[i].style.display = "none";
+            }
+        }
 
-		closeModal.onclick = function () {
-			modal.style.display = "none";
-			content.style.display = "block";
-			contactForm.style.display = "block";
-		}
+        const displayDesc = (description) => {
+            displayModal();
+            // modal.style.background = ;
+            document.getElementById(description).style.display = "block";
+        }
 
-		// const getRandomNum = (upTo) => upTo * Math.random();
-		const randomNumInRange = (from, to) => ((to - from) * Math.random()) + from;
-		const getRandomPastel = () => {
-			const from = 200;
-			const to = 255;
-			return '#' + Math.floor(randomNumInRange(from, to)).toString(16) +
-				Math.floor(randomNumInRange(from, to)).toString(16) +
-				Math.floor(randomNumInRange(from, to)).toString(16);
-		}
+        closeModal.onclick = function () {
+            modal.style.display = "none";
+            content.style.display = "block";
+            contactForm.style.display = "block";
+        }
 
-		const projects = document.getElementsByClassName("project");
+        // const getRandomNum = (upTo) => upTo * Math.random();
+        const randomNumInRange = (from, to) => ((to - from) * Math.random()) + from;
+        const getRandomPastel = () => {
+            const from = 200;
+            const to = 255;
+            return '#' + Math.floor(randomNumInRange(from, to)).toString(16) +
+                Math.floor(randomNumInRange(from, to)).toString(16) +
+                Math.floor(randomNumInRange(from, to)).toString(16);
+        }
 
-		// window.onload = () => {
+        const projects = document.getElementsByClassName("project");
 
-		for (i = 0; i < projects.length; i++) { // hide all the descriptions
-			const element = projects[i];
-			element.style.background = getRandomPastel();
-			element.onmouseenter = () => {
-				modifyAlpha(element, -0.3);
-			};
-			element.onmouseleave = () => {
-				modifyAlpha(element, 0.3);
-			};
-			// element.click = () => {
-			// 	modifyAlpha(element, -0.6);
-			// };
-		}
+        // window.onload = () => {
 
-		const modifyAlpha = (element, addToAlpha) => {
-			const color = getComputedStyle(element).getPropertyValue("background-color");
-			// Get all color components (alpha may not be there if = 1):
-			const parts = color.match(/[\d.]+/g);
-			if (parts.length === 3) {
-				parts.push(1);
-			}
-			// Modify alpha:
-			parts[3] = Math.min(1, Math.max(0, parseFloat(parts[3]) + addToAlpha));
-			// Apply new value:
-			element.style.backgroundColor = `rgba(${parts.join(',')})`;
-		}
-		// }
+        for (i = 0; i < projects.length; i++) { // hide all the descriptions
+            const element = projects[i];
+            element.style.background = getRandomPastel();
+            element.onmouseenter = () => {
+                modifyAlpha(element, -0.3);
+            };
+            element.onmouseleave = () => {
+                modifyAlpha(element, 0.3);
+            };
+            // element.click = () => {
+            // 	modifyAlpha(element, -0.6);
+            // };
+        }
 
-	</script>
+        const modifyAlpha = (element, addToAlpha) => {
+            const color = getComputedStyle(element).getPropertyValue("background-color");
+            // Get all color components (alpha may not be there if = 1):
+            const parts = color.match(/[\d.]+/g);
+            if (parts.length === 3) {
+                parts.push(1);
+            }
+            // Modify alpha:
+            parts[3] = Math.min(1, Math.max(0, parseFloat(parts[3]) + addToAlpha));
+            // Apply new value:
+            element.style.backgroundColor = `rgba(${parts.join(',')})`;
+        }
+    // }
+
+    </script>
 </body>
 
 </html>
