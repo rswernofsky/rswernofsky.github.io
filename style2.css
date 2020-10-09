@@ -135,6 +135,7 @@ nav li {
 	border-radius: 0.25rem;
 	background-color: #fcfcfc;
 	font-family: 'Lato', sans-serif;
+	cursor: pointer;
 }
 
 #closeModal:hover {
@@ -156,6 +157,7 @@ nav li {
     border: none;
 	/* background-color: #fcfcfc; */
 	padding: 1rem;
+	cursor: pointer;
 }
 
 /* .project:hover {
