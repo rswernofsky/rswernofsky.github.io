@@ -113,6 +113,11 @@ nav li {
 	/* justify-content: center; */
 }
 
+img {
+	width: 100%;
+	height: auto;
+}
+
 #modal {
 	display: none; /* hidden by default */
 	background-color: #fcfcfc;
