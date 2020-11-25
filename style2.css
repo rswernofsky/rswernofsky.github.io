@@ -115,7 +115,7 @@ nav li {
 
 img {
 	width: auto;
-	height: calc(40vmax);
+	height: 100%;
 }
 
 #modal {
