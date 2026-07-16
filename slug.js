@@ -9,6 +9,8 @@ const NUM_CIRCLES_OPTIONS = [3, 3, 4];
 
 const NUM_ARCS = 7;
 const ARC_OFFSCREEN_MARGIN = 80;
+// Small stagger so initial slugs don't all start moving in perfect unison.
+const INITIAL_START_DELAY_MAX_MS = 6000;
 
 const HEAD_TAIL_RADIUS_MULT = 1.5;
 const BODY_RADIUS_MULT = 2;
@@ -54,7 +56,7 @@ function draw() {
   for (let i = 0; i < slugs.length; i++) {
     const thetas = circleThetasAt(slugs[i], now);
     if (thetas.every((theta) => theta > slugs[i].arc.endAngle)) {
-      arcs[i] = generateArc();
+      arcs[i] = generateArc(arcs.filter((_, j) => j !== i));
       slugs[i] = makeSlug(arcs[i], i, false);
     }
     drawSlug(slugs[i], now);
@@ -85,12 +87,42 @@ function spawnAllSlugs(randomizePhase = true) {
 function generateArcs(count) {
   const result = [];
   for (let i = 0; i < count; i++) {
-    result.push(generateArc());
+    result.push(generateArc(result));
   }
   return result;
 }
 
-function generateArc() {
+// Rejection-samples against otherArcs' visible midpoints so paths spread out
+// across the screen instead of clustering/crossing on top of each other.
+function generateArc(otherArcs = []) {
+  const minSeparation = min(width, height) * 0.25;
+  let best = null;
+  let bestScore = -Infinity;
+
+  for (let attempt = 0; attempt < 15; attempt++) {
+    const candidate = buildArc();
+    if (otherArcs.length === 0) return candidate;
+
+    const apex = pointOnArc(
+      candidate,
+      (candidate.startAngle + candidate.endAngle) / 2,
+    );
+    const score = Math.min(
+      ...otherArcs.map((other) =>
+        apex.dist(pointOnArc(other, (other.startAngle + other.endAngle) / 2)),
+      ),
+    );
+
+    if (score >= minSeparation) return candidate;
+    if (score > bestScore) {
+      bestScore = score;
+      best = candidate;
+    }
+  }
+  return best;
+}
+
+function buildArc() {
   const { a, b } = pickArcChord();
   const mid = p5.Vector.lerp(a, b, 0.5);
   const { radius, centerCandidates } = circleThroughChord(a, b);
@@ -207,7 +239,7 @@ function makeSlug(arc, index, randomizePhase) {
   const initialSpacing = (2.3 * unitSize) / arc.radius;
   // Extra pullback so the head circle clears the screen entirely at spawn,
   // instead of just poking onto it.
-  const spawnPullback = (3 * unitSize) / arc.radius;
+  const spawnPullback = (2 * unitSize) / arc.radius;
   const thetaBase = arc.startAngle - spawnPullback;
   const initialThetas = [];
   for (let i = 0; i < numCircles; i++) {
@@ -224,6 +256,7 @@ function makeSlug(arc, index, randomizePhase) {
   // ahead by however many cycles had elapsed since page load.
   const spawnTime = millis();
   const phaseOffset = randomizePhase ? random(0, cycleLength) : 0;
+  const startDelay = randomizePhase ? random(0, INITIAL_START_DELAY_MAX_MS) : 0;
 
   return {
     arc,
@@ -233,6 +266,7 @@ function makeSlug(arc, index, randomizePhase) {
     bodyColor,
     dotColor,
     spawnTime,
+    startDelay,
     phaseOffset,
   };
 }
@@ -243,7 +277,10 @@ function makeSlug(arc, index, randomizePhase) {
 function circleThetasAt(slug, now) {
   const duration = slug.duration;
   const cycleLength = slug.initialThetas.length * duration;
-  const elapsed = now - slug.spawnTime + slug.phaseOffset;
+  const elapsed = max(
+    0,
+    now - slug.spawnTime - slug.startDelay + slug.phaseOffset,
+  );
   const cycleIndex = Math.floor(elapsed / cycleLength);
   const t = elapsed % cycleLength;
   const activeIndex = Math.floor(t / duration);
