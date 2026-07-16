@@ -27,6 +27,14 @@ a {
   color: black;
 }
 
+#back {
+  font-size: 20px;
+  color: black;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
 li :hover {
   color: grey;
 }
