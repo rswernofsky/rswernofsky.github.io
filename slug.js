@@ -40,13 +40,110 @@ let arcs = [];
 let slugs = [];
 
 // ---------------------------------------------------------------------------
+// Cross-page persistence
+// ---------------------------------------------------------------------------
+
+// Slugs keep crawling across page navigations within the same tab: state is
+// saved to sessionStorage on the way out and resumed (at the elapsed
+// animation position, not restarted) on the next page's setup().
+const SLUG_STORAGE_KEY = "slugCrawlState";
+
+function saveSlugState() {
+  const now = millis();
+  const state = {
+    width,
+    height,
+    slugs: slugs.map((slug, i) => ({
+      index: i,
+      arc: {
+        origin: { x: slug.arc.origin.x, y: slug.arc.origin.y },
+        radius: slug.arc.radius,
+        startAngle: slug.arc.startAngle,
+        endAngle: slug.arc.endAngle,
+      },
+      thetaStep: slug.thetaStep,
+      initialThetas: slug.initialThetas,
+      duration: slug.duration,
+      elapsed: max(
+        0,
+        now - slug.spawnTime - slug.startDelay + slug.phaseOffset,
+      ),
+    })),
+  };
+  try {
+    sessionStorage.setItem(SLUG_STORAGE_KEY, JSON.stringify(state));
+  } catch (e) {
+    // Storage unavailable (e.g. private browsing) — just skip persistence.
+  }
+}
+
+// Rebuilds slugs/arcs from saved state, resuming each slug's animation at
+// the point it left off rather than jumping back to spawn.
+function restoreSlugState() {
+  let state;
+  try {
+    const raw = sessionStorage.getItem(SLUG_STORAGE_KEY);
+    if (!raw) return null;
+    state = JSON.parse(raw);
+  } catch (e) {
+    return null;
+  }
+  if (!state || !Array.isArray(state.slugs) || state.slugs.length === 0) {
+    return null;
+  }
+
+  const scaleX = width / state.width;
+  const scaleY = height / state.height;
+  const scale = (scaleX + scaleY) / 2;
+  const now = millis();
+
+  const restoredArcs = [];
+  const restoredSlugs = [];
+  for (const s of state.slugs) {
+    const arc = {
+      origin: createVector(s.arc.origin.x * scaleX, s.arc.origin.y * scaleY),
+      radius: s.arc.radius * scale,
+      startAngle: s.arc.startAngle,
+      endAngle: s.arc.endAngle,
+    };
+    const [red, green, blue] = PASTEL_PALETTE[s.index % PASTEL_PALETTE.length];
+    const bodyColor = color(red, green, blue);
+    const dotColor = lerpColor(bodyColor, color(255), 0.4);
+
+    restoredArcs.push(arc);
+    restoredSlugs.push({
+      arc,
+      thetaStep: s.thetaStep,
+      initialThetas: s.initialThetas,
+      duration: s.duration,
+      bodyColor,
+      dotColor,
+      spawnTime: now - s.elapsed,
+      startDelay: 0,
+      phaseOffset: 0,
+    });
+  }
+  return { arcs: restoredArcs, slugs: restoredSlugs };
+}
+
+// ---------------------------------------------------------------------------
 // Lifecycle
 // ---------------------------------------------------------------------------
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   computeLayout();
-  spawnAllSlugs();
+
+  const restored = restoreSlugState();
+  if (restored) {
+    arcs = restored.arcs;
+    slugs = restored.slugs;
+  } else {
+    spawnAllSlugs();
+  }
+
+  window.addEventListener("pagehide", saveSlugState);
+  window.addEventListener("beforeunload", saveSlugState);
 }
 
 function draw() {
