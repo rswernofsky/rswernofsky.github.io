@@ -1,34 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@100&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 canvas {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* background-color: lightgrey; */
-    /* display: none; */
-    z-index: -1;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: lightgrey; */
+  /* display: none; */
+  z-index: -1;
 }
 
-
 body {
-	font-family: 'Lato', sans-serif;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 a {
-	color: black;
+  color: black;
 }
 
 li :hover {
-	color: grey;
+  color: grey;
 }
 
 /* #intro {
@@ -38,28 +38,28 @@ li :hover {
 } */
 
 #container {
-	width: 90%;
-	height: 100vh;
-	max-width: 650px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-	position: absolute;
+  width: 90%;
+  height: 100vh;
+  max-width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
 }
 
 p {
-    line-height: 130%;
-    margin:.6rem 0;
+  line-height: 130%;
+  margin: 0.6rem 0;
 }
 
 #title {
-	/* font-family: 'Montserrat', sans-serif; */
-	font-family: 'Lato', sans-serif;
-	font-weight: 100;
-    margin: 0rem 0 1rem;
-	font-size: 45px;
-	margin-left: -0.3rem;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  margin: 0rem 0 1rem;
+  font-size: 45px;
+  margin-left: -0.3rem;
 }
 /* 
 #portrait {
@@ -71,14 +71,14 @@ p {
 } */
 
 nav {
-    margin:1rem 0 1rem;
+  margin: 1rem 0 1rem;
 }
 
 nav li {
-	font-size: 20px;
-	font-family: 'Montserrat', sans-serif;
-    display: inline-block;
-	margin:0 0.5rem 0 0;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  margin: 0 0.5rem 0 0;
 }
 
 /* .blob {
